@@ -1,0 +1,25 @@
+
+public class main7 implements Runnable{
+
+	private final static int MAX = 3;
+	private String name;
+
+	public main7(String name) {
+		System.out.println("Implementando la Interfaz Runnable");
+		this.name = name;
+	}
+
+	public void run () {
+		System.out.println("El nombre es: "+name);
+	}
+
+	public static void main(String[] args) {
+		Thread [] ta = new Thread[MAX];
+		for(int i=0; i<ta.length; i++) {
+			ta[i] = new Thread ( new main7("Thread"+i));
+		}
+		for(int i=0; i<ta.length; i++) {
+			ta[i].start();
+		}
+	}
+}

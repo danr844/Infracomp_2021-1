@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Ejercicio implements Runnable {
+
+	private String name;
+	private int upperLimit;
+
+	public Ejercicio(String name) {
+		System.out.println("Ingrese el límite de números: ");
+		Scanner scannerObj = new Scanner(System.in);
+        int wenas=Integer.parseInt((scannerObj.nextLine()).trim());
+		System.out.println("Implementando la interfaz Runnable");
+		this.name = name;
+		this.upperLimit = wenas;
+	}
+
+	public void run () {
+		
+		try {
+			for(int i= 0; i<wenas; i++) {
+				System.out.println(name+ " valor: "+i);
+				Thread.sleep(50);
+			}
+
+		}
+		catch(Exception e){}
+		System.out.println("Saliendo: "+name);
+	}
+
+	public static void main(String[] args) {
+
+		
+		Thread t0 = new Thread (new Ejercicio("Thread"+0));
+		Thread t1 = new Thread (new Ejercicio("Thread"+1));
+
+		t0.start();
+		t1.start();
+	}
+
+}

@@ -1,0 +1,27 @@
+
+public class main8 extends Thread {
+	
+
+	private final static int MAX = 3;
+	private String name;
+
+	public main8(String name) {
+		System.out.println("Extendiendo la clase Thread");
+		this.name = name;
+	}
+
+	public void run () {
+		System.out.println("El nombre es: "+name);
+	}
+
+	public static void main(String[] args) {
+		main8 [] ta = new main8[MAX];
+		for(int i=0; i<ta.length; i++) {
+			ta[i] = new main8 ("Thread"+i);
+		}
+		for(int i=0; i<ta.length; i++) {
+			ta[i].start();
+		}
+	}
+
+}

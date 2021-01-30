@@ -1,0 +1,15 @@
+
+public class main extends Thread{
+	public void run() {
+		System.out.println("Extendido la clase Thread.");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		main t = new main();
+		t.start();
+	}
+	
+	
+
+}
