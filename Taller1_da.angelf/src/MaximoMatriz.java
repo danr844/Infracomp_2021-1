@@ -38,7 +38,7 @@ public class MaximoMatriz extends Thread {
 	private static void imprimirMatriz() {
 		for(int i=0; i<DIM;i++) {
 			for(int j =0; j<DIM;j++) {
-				System.out.println(matriz[i][j]+"\t");
+				System.out.print(matriz[i][j]+"\t");
 			}
 			System.out.println();
 		}
