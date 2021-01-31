@@ -35,6 +35,7 @@ public class Ejercicio implements Runnable {
 		System.out.println("Ingrese el límite de números: ");
 		Scanner scannerObj = new Scanner(System.in);
 		int wenas=Integer.parseInt((scannerObj.nextLine()).trim());
+		scannerObj.close();
 		upperLimit = wenas;
 		Thread t0 = new Thread (new Ejercicio("Thread"+0));
 		Thread t1 = new Thread (new Ejercicio("Thread"+1));
